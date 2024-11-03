@@ -18,6 +18,8 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    @Column(unique = true, nullable = false)
+    private String email;
     private String country;
     @CreationTimestamp
     private Date addedOn;
